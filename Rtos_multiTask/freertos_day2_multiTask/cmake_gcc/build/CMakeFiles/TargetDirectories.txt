@@ -1,0 +1,4 @@
+C:/Auvetra/freertos_blink/cmake_gcc/build/CMakeFiles/slc.dir
+C:/Auvetra/freertos_blink/cmake_gcc/build/CMakeFiles/blink_kernel_freertos.dir
+C:/Auvetra/freertos_blink/cmake_gcc/build/CMakeFiles/edit_cache.dir
+C:/Auvetra/freertos_blink/cmake_gcc/build/CMakeFiles/rebuild_cache.dir
