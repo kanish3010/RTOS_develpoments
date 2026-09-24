@@ -1,0 +1,30 @@
+{
+    "configurations": [
+        {
+            "name": "blink_kernel_freertos_silabs_debug:default_config",
+            "cwd": "${workspaceFolder}",
+            "type": "cortex-debug",
+            "request": "launch",
+            "serverpath": "C:/Users/kanis/.silabs/slt/installs/archive/exx32-v6.0.32/JLinkGDBServerCL.exe",
+            "servertype": "jlink",
+            "gdbPath": "C:/Users/kanis/.silabs/slt/installs/archive/exx32-v6.0.32/arm-none-eabi-gdb.exe",
+            "device": "EFR32ZG28BxxxF1024",
+            "svdFile": "C:\\Users\\kanis\\AppData\\Local\\Temp\\silabs_extension\\silabs_extension\\svd\\EFR32ZG28B312F1024IM48.svd",
+            "runToEntryPoint": "main",
+            "rtos": "FreeRTOS",
+            "showDevDebugOutput": "raw",
+            "executable": "c:/Auvetra/freertos_blink/cmake_gcc/build/base/blink_kernel_freertos.out",
+            "preLaunchTask": "blink_kernel_freertos_silabs_debug:default_config_combined",
+            "serialNumber": "440316401",
+            "overrideLaunchCommands": [
+                "exec-file c:/Auvetra/freertos_blink/cmake_gcc/build/base/blink_kernel_freertos.out",
+                "symbol-file c:/Auvetra/freertos_blink/cmake_gcc/build/base/blink_kernel_freertos.out"
+            ],
+            "overrideResetCommands": [
+                "monitor reset",
+                "set $pc = __Vectors[1]",
+                "set $sp = __Vectors[0]"
+            ]
+        }
+    ]
+}

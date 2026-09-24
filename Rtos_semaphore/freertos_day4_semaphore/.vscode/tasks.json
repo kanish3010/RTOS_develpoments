@@ -1,0 +1,47 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "blink_kernel_freertos_silabs_debug:default_config_setup",
+            "type": "shell",
+            "command": "C:/Users/kanis/.silabs/slt/installs/conan/p/cmakefa35ab0687064/p/bin/cmake.exe --preset project",
+            "options": {
+                "cwd": "c:/Auvetra/freertos_blink/cmake_gcc"
+            }
+        },
+        {
+            "label": "blink_kernel_freertos_silabs_debug:default_config_build",
+            "type": "shell",
+            "command": "C:/Users/kanis/.silabs/slt/installs/conan/p/cmakefa35ab0687064/p/bin/cmake.exe --build --preset default_config",
+            "options": {
+                "cwd": "c:/Auvetra/freertos_blink/cmake_gcc"
+            }
+        },
+        {
+            "label": "blink_kernel_freertos_silabs_debug:default_config_flash",
+            "type": "shell",
+            "command": "C:/Users/kanis/.silabs/slt/installs/archive/Simplicity Commander/commander.exe",
+            "args": [
+                "flash",
+                "c:/Auvetra/freertos_blink/cmake_gcc/build/base/blink_kernel_freertos.hex",
+                "--halt",
+                "--serialno",
+                "440316401",
+                "--device",
+                "EFR32ZG28B312F1024IM48"
+            ]
+        },
+        {
+            "label": "blink_kernel_freertos_silabs_debug:default_config_combined",
+            "dependsOrder": "sequence",
+            "presentation": {
+                "reveal": "never"
+            },
+            "dependsOn": [
+                "blink_kernel_freertos_silabs_debug:default_config_setup",
+                "blink_kernel_freertos_silabs_debug:default_config_build",
+                "blink_kernel_freertos_silabs_debug:default_config_flash"
+            ]
+        }
+    ]
+}
